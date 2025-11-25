@@ -1,7 +1,6 @@
 {
   "name": "aive-fiscal-sponsor",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,8 +14,6 @@
   "devDependencies": {
     "tailwindcss": "^3.3.3",
     "postcss": "^8.4.31",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "14.0.0"
+    "autoprefixer": "^10.4.14"
   }
 }
