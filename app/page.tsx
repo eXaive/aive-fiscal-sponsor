@@ -22,7 +22,7 @@ export default function Page() {
 
         <div className="flex justify-center gap-4">
           <a
-            href="/public/AIVE_Fiscal_Sponsor_Packet_Final.pdf"
+            href="/AIVE_Fiscal_Sponsor_Packet_Final.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition font-semibold"
