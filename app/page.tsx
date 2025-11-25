@@ -22,7 +22,9 @@ export default function Page() {
 
         <div className="flex justify-center gap-4">
           <a
-            href="/AIVE_Showcase_PDF_labeled.pdf"
+            href="/docs/AIVE_Showcase_PDF_labeled.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition font-semibold"
           >
             Download Sponsorship Packet
@@ -129,7 +131,7 @@ export default function Page() {
           ))}
         </div>
 
-        {/* Lightbox Modal */}
+        {/* LIGHTBOX */}
         {activeImage && (
           <div
             className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50"
