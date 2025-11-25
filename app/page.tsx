@@ -1,141 +1,164 @@
-export default function FiscalSponsorLanding() {
+"use client";
+
+import { useState } from "react";
+
+export default function Page() {
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+
   return (
     <div className="bg-white text-slate-900">
 
-      {/* ========== HERO SECTION ========== */}
-      <section className="py-32 bg-gradient-to-b from-slate-50 to-white text-center">
-        <h1 className="text-6xl font-extrabold tracking-tight mb-6">
+      {/* HERO */}
+      <section className="py-28 text-center bg-gradient-to-b from-slate-100 to-white">
+        <h1 className="text-5xl font-extrabold mb-6 leading-tight text-slate-900">
           AIVE — Public Benefit Intelligence & Education
         </h1>
 
-        <p className="text-xl max-w-3xl mx-auto text-slate-600 leading-relaxed mb-10">
-          Empowering communities with outbreak literacy, economic stability
-          insights, workforce preparedness, and global risk awareness — all through
-          clear dashboards, predictive learning tools, and modern AI education.
+        <p className="text-lg max-w-2xl mx-auto text-slate-600 mb-8 leading-relaxed">
+          Helping communities understand outbreaks, economic shifts, workforce
+          risks, and global disruptions through accessible dashboards,
+          predictive learning tools, and AI literacy education.
         </p>
 
         <div className="flex justify-center gap-4">
           <a
-            href="/AIVE_Fiscal_Sponsor_Packet_Final.pdf"
-            className="px-8 py-3 bg-blue-600 text-white text-lg font-medium rounded-lg shadow hover:bg-blue-700 transition"
+            href="/AIVE_Showcase_PDF_labeled.pdf"
+            className="px-8 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition font-semibold"
           >
             Download Sponsorship Packet
           </a>
 
           <a
-            href="mailto:info@aive.global"
-            className="px-8 py-3 bg-slate-200 text-lg font-medium rounded-lg shadow hover:bg-slate-300 transition"
+            href="mailto:youremail@example.com"
+            className="px-8 py-3 bg-slate-200 rounded-lg shadow hover:bg-slate-300 transition font-semibold"
           >
             Request Meeting
           </a>
         </div>
       </section>
 
-      {/* ========== WHY IT MATTERS ========== */}
-      <section className="py-24 bg-white border-t">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Why This Work Matters</h2>
+      {/* WHAT IS AIVE */}
+      <section className="py-24 bg-slate-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4 text-slate-900">What is AIVE?</h2>
 
-          <p className="max-w-3xl mx-auto text-lg text-slate-700 leading-relaxed mb-12">
-            Communities often receive critical intelligence too late — from outbreaks to
-            financial instability to climate disruptions. AIVE makes early-warning
-            intelligence accessible, understandable, and actionable for everyone.
+          <p className="text-lg text-slate-700 leading-relaxed">
+            AIVE — Awareness • Intelligence • Verification • Evolution — is a
+            public-benefit intelligence platform that translates complex global
+            signals into clear, educational tools that empower communities to
+            prepare for change rather than react to it.
           </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              {
-                title: "Early Warning Access",
-                desc: "Public dashboards that help communities prepare instead of react.",
-              },
-              {
-                title: "Educational Empowerment",
-                desc: "Simple tools explaining complex outbreaks, economics, and global shifts.",
-              },
-              {
-                title: "Equitable Readiness",
-                desc: "Bringing intelligence access to underserved and overlooked populations.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-slate-50 p-8 rounded-xl border shadow-sm hover:shadow-md transition"
-              >
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-slate-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* ========== PROGRAM GRID ========== */}
-      <section className="py-28 bg-slate-100 border-y">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          AIVE Public Education Programs
+      {/* PROGRAM GRID */}
+      <section className="py-24 max-w-6xl mx-auto px-6">
+        <h2 className="text-3xl font-extrabold text-center mb-12">
+          Our Public Education Programs
         </h2>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { emoji: "🧬", title: "Outbreak Literacy Tools", desc: "Understand disease signals and transmission trends clearly." },
-            { emoji: "🎮", title: "Predictive Learning Games", desc: "Simulations showing how events ripple through public systems." },
-            { emoji: "📈", title: "Economic Stability Education", desc: "Simple learning paths on inflation, markets, and financial shocks."},
-            { emoji: "🤖", title: "Workforce & AI Preparedness", desc: "Helping citizens prepare for automation and AI job transitions."},
-            { emoji: "🌍", title: "Global Risk Awareness Tools", desc: "Visual explainers for climate, geopolitics, and global disruptions."},
-            { emoji: "🧠", title: "AI Literacy for Everyone", desc: "Accessible AI safety and digital intelligence education."},
+            {
+              title: "Outbreak Literacy Tools",
+              emoji: "🧬",
+              desc: "Dashboards explaining outbreak signals, transmission trends, and preparedness.",
+            },
+            {
+              title: "Predictive Learning Games",
+              emoji: "🎮",
+              desc: "Mock-data simulations showing how events ripple across public systems.",
+            },
+            {
+              title: "Economic Stability Education",
+              emoji: "📈",
+              desc: "Simple modules explaining inflation, markets, and financial shocks.",
+            },
+            {
+              title: "Workforce & AI Preparedness",
+              emoji: "🤖",
+              desc: "Understanding automation, workforce transition, and AI readiness.",
+            },
+            {
+              title: "Global Risk Awareness Tools",
+              emoji: "🌍",
+              desc: "Visual explainers on geopolitics, climate events, and global disruption flows.",
+            },
+            {
+              title: "AI Literacy for Everyone",
+              emoji: "🧠",
+              desc: "Accessible learning on modern AI, public safety, and digital empowerment.",
+            },
           ].map((p, i) => (
             <div
               key={i}
-              className="bg-white border rounded-xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition"
+              className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1"
             >
-              <div className="text-5xl mb-4">{p.emoji}</div>
-              <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
-              <p className="text-slate-600">{p.desc}</p>
+              <div className="text-4xl mb-3">{p.emoji}</div>
+              <h3 className="font-semibold text-lg mb-2">{p.title}</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">{p.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ========== SYSTEM SHOWCASE (TECH SIDE) ========== */}
-      <section className="py-28 bg-white">
-        <div className="max-w-5xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Explore the AIVE Intelligence System</h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Real product screenshots showing AIVE’s outbreak intelligence, finance
-            engines, leadership outlooks, and multi-agent system in action.
-          </p>
+      {/* SHOWCASE SECTION */}
+      <section className="py-24 bg-slate-50">
+        <h2 className="text-3xl font-extrabold text-center mb-12 text-slate-900">
+          AIVE Platform Showcase
+        </h2>
+
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+          {[
+            "/aive-showcase/1.png",
+            "/aive-showcase/2.png",
+            "/aive-showcase/3.png",
+            "/aive-showcase/4.png",
+            "/aive-showcase/5.png",
+            "/aive-showcase/6.png",
+            "/aive-showcase/7.png",
+            "/aive-showcase/8.png",
+          ].map((src, i) => (
+            <div
+              key={i}
+              className="cursor-pointer rounded-lg overflow-hidden shadow hover:shadow-xl hover:-translate-y-1 transition"
+              onClick={() => setActiveImage(src)}
+            >
+              <img src={src} className="w-full h-48 object-cover" />
+            </div>
+          ))}
         </div>
 
-        {/* SYSTEM COLLAGE */}
-        <div className="max-w-6xl mx-auto px-6">
-          <img
-            src="/system_collage_labeled.png"
-            className="rounded-xl shadow-2xl w-full"
-            alt="AIVE System Showcase"
-          />
-        </div>
+        {/* Lightbox Modal */}
+        {activeImage && (
+          <div
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50"
+            onClick={() => setActiveImage(null)}
+          >
+            <img
+              src={activeImage}
+              className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl"
+            />
+          </div>
+        )}
       </section>
 
-      {/* ========== CONTACT ========== */}
-      <section className="py-28 bg-slate-900 text-white text-center">
-        <h2 className="text-4xl font-bold mb-6">Let’s Build Public Resilience Together</h2>
+      {/* CONTACT */}
+      <section className="py-24 bg-slate-900 text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">Let’s Build Public Resilience Together</h2>
 
-        <p className="mb-8 text-lg text-slate-300">
-          Email: <span className="font-medium">info@aive.global</span>
+        <p className="mb-6 text-slate-300">
+          Email: <span className="font-medium">youremail@example.com</span>
         </p>
 
         <a
-          href="mailto:info@aive.global"
-          className="px-10 py-3 text-lg bg-blue-500 rounded-lg font-semibold hover:bg-blue-600 transition"
+          href="mailto:youremail@example.com"
+          className="px-8 py-3 bg-blue-500 rounded-md text-white font-semibold hover:bg-blue-600 transition"
         >
-          Request Introduction Call
+          Request Intro Call
         </a>
       </section>
 
-      <footer className="py-8 text-center text-slate-500 text-sm">
-        © {new Date().getFullYear()} AIVE Public Benefit Intelligence. All Rights Reserved.
-      </footer>
     </div>
   );
 }
-
