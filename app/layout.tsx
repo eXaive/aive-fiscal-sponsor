@@ -1,8 +1,8 @@
 import "./../styles/global.css";
 
 export const metadata = {
-  title: "AIVE Fiscal Sponsor",
-  description: "Public Benefit Intelligence & Education",
+  title: "AIVE — Public Benefit Intelligence",
+  description: "AIVE public benefit intelligence platform",
 };
 
 export default function RootLayout({ children }) {
