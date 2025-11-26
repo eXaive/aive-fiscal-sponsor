@@ -154,7 +154,7 @@ export default function Page() {
         </p>
 
         <a
-          href="mailto:youremail@example.com"
+          href="mailto:founder@aive.global"
           className="px-8 py-3 bg-blue-500 rounded-md text-white font-semibold hover:bg-blue-600 transition"
         >
           Request Intro Call
